@@ -1,2 +1,2 @@
-# Ira_Dennise
-WebDevLab T2-LA2: The Login + Signup Form (HTML + CSS)
+# marquez_taruc_rigor_cordero
+WebDevLab MCO1: Simply Socialize (HTML + CSS Framework - Bootstrap + JS)
