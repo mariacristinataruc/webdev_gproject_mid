@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed- AuraSnap</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+          body {
+              overflow-x: hidden;
+              margin: 0;
+              font-family: Poppins;
+              width: 1920px;
+              height: 1080px;
+          }
+
+          .feed {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f1f1f1;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Other styles remain the same */
+
+        /* Feed item */
+        .feed-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 40%;
+            max-width: 600px;
+            margin: 10px;
+            padding: 0;
+        }
+
+                /* Adjustments for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .feed {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feed-item {
+                width: 90%; /* Adjust width for smaller screens */
+                margin: 10px 0;
+            }
+        }
+
+          .feed .input {
+            position: absolute;
+            width: 789px;
+            height: 66px;
+            top: 16px;
+            left: 565px;
+            background-color: #f5f5fa;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #aaaacc80, inset 2px 2px 4px #aaaacc40,
+              inset -2px -2px 4px #ffffff80;
+          }
+          
+          .feed .overlap-group {
+            position: relative;
+            width: 757px;
+            height: 66px;
+            left: 32px;
+          }
+          
+          .feed .text-wrapper {
+            position: absolute;
+            width: 693px;
+            height: 40px;
+            top: 12px;
+            left: 0;
+            opacity: 0.6;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #7878aa;
+            font-size: 30px;
+            letter-spacing: 0;
+            line-height: 40px;
+          }
+          
+          .feed .button {
+            position: absolute;
+            width: 67px;
+            height: 66px;
+            top: 0;
+            left: 690px;
+          }
+          
+          .feed .overlap {
+            position: absolute;
+            width: 421px;
+            height: 440px;
+            top: 158px;
+            left: 1483px;
+            background-color: #f7f9f9;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .overlap-2 {
+            position: absolute;
+            width: 421px;
+            height: 67px;
+            top: 0;
+            left: 0;
+          }
+          
+          .feed .rectangle {
+            width: 421px;
+            height: 66px;
+            top: 0;
+            background-color: #4361ee;
+            border-radius: 30px 30px 0px 0px;
+            position: absolute;
+            left: 0;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-2 {
+            position: absolute;
+            width: 259px;
+            top: 7px;
+            left: 11px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 35px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-3 {
+            position: absolute;
+            width: 165px;
+            top: 108px;
+            left: 89px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-4 {
+            width: 165px;
+            top: 197px;
+            left: 89px;
+            font-size: 20px;
+            position: absolute;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-5 {
+            position: absolute;
+            width: 165px;
+            top: 282px;
+            left: 89px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-6 {
+            position: absolute;
+            width: 165px;
+            top: 366px;
+            left: 91px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .group {
+            position: absolute;
+            width: 68px;
+            height: 68px;
+            top: 87px;
+            left: 11px;
+            background-image: url(./img/image-17.png);
+            background-size: cover;
+            background-position: 50% 50%;
+          }
+          
+          .feed .signupbutton {
+            top: 109px;
+            left: 305px;
+            position: absolute;
+            width: 105px;
+            height: 37px;
+          }
+          
+          .feed .div-wrapper {
+            position: relative;
+            width: 120px;
+            height: 40px;
+            left: -15px;
+            border-radius: 70px;
+            border: 1px solid;
+            border-color: #f9fbfd;
+            box-shadow: 0px 4px 4px #1200ff40;
+            background: linear-gradient(180deg, #4361EE 0%, #3A0CA3 100%);
+          }
+          
+          /* Preserve the appearance of the text when converted to links */
+.text-wrapper-7 {
+  position: absolute;
+  width: 76px;
+  top: 7px;
+  left: 27px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: #f9fafc;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: normal;
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure proper positioning */
+}
+
+/* Style anchor tags similarly to the original text elements */
+.text-wrapper-7 a {
+  color: inherit; /* Inherit text color */
+  text-decoration: inherit; /* Inherit text decoration */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+          
+          .feed .overlap-wrapper {
+            top: 194px;
+            left: 309px;
+            position: absolute;
+            width: 105px;
+            height: 37px;
+          }
+          
+          .feed .overlap-group-wrapper {
+            top: 279px;
+            left: 307px;
+            position: absolute;
+            width: 105px;
+            height: 37px;
+          }
+          
+          .feed .signupbutton-2 {
+            top: 363px;
+            left: 308px;
+            position: absolute;
+            width: 105px;
+            height: 37px;
+          }
+
+          .feed .image5 {
+            width: 68px;
+            height: 68px;
+            top: 88px;
+            left: 11px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .image {
+            width: 68px;
+            height: 68px;
+            top: 176px;
+            left: 11px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .img {
+            width: 68px;
+            height: 68px;
+            top: 264px;
+            left: 11px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .image-2 {
+            width: 68px;
+            height: 68px;
+            top: 353px;
+            left: 11px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-3 {
+            position: absolute;
+            width: 421px;
+            height: 418px;
+            top: 638px;
+            left: 1483px;
+            background-color: #f7f9f9;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .overlap-4 {
+            position: absolute;
+            width: 130px;
+            height: 118px;
+            top: 105px;
+            left: 56px;
+            background-color: #9683ec;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-8 {
+            position: absolute;
+            width: 75px;
+            top: 81px;
+            left: 27px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .hiking {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 26px;
+            left: 40px;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-5 {
+            position: absolute;
+            width: 130px;
+            height: 118px;
+            top: 252px;
+            left: 56px;
+            background-color: #ffcf70;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-9 {
+            position: absolute;
+            width: 104px;
+            top: 80px;
+            left: 17px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .cooking-pot {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 31px;
+            left: 40px;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-6 {
+            position: absolute;
+            width: 421px;
+            height: 83px;
+            top: 0;
+            left: 0;
+            background-color: #4361ee;
+            border-radius: 30px 30px 0px 0px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-10 {
+            position: absolute;
+            width: 365px;
+            top: 15px;
+            left: 21px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 35px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .overlap-7 {
+            position: absolute;
+            width: 130px;
+            height: 118px;
+            top: 105px;
+            left: 224px;
+            background-color: #4895ef;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-11 {
+            position: absolute;
+            width: 107px;
+            top: 79px;
+            left: 23px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .fashion {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 26px;
+            left: 48px;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-8 {
+            position: absolute;
+            width: 130px;
+            height: 118px;
+            top: 252px;
+            left: 229px;
+            background-color: #f992ad;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-12 {
+            position: absolute;
+            width: 81px;
+            top: 82px;
+            left: 27px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .fitness {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 31px;
+            left: 43px;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-9 {
+            position: absolute;
+            width: 427px;
+            height: 1080px;
+            top: 0;
+            left: 0;
+            background-color: #f7f9f9;
+          }
+          
+          .feed .photo {
+            position: absolute;
+            width: 276px;
+            height: 68px;
+            top: 28px;
+            left: 76px;
+            object-fit: cover;
+          }
+          
+          .feed .text-wrapper-13 {
+            position: absolute;
+            width: 259px;
+            top: 142px;
+            left: 106px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-14 {
+            top: 257px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            white-space: nowrap;
+            position: absolute;
+            width: 259px;
+            left: 111px;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-15 {
+            position: absolute;
+            width: 259px;
+            top: 371px;
+            left: 111px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-16 {
+            position: absolute;
+            width: 259px;
+            top: 479px;
+            left: 111px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-17 {
+            top: 884px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            position: absolute;
+            width: 259px;
+            left: 111px;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-18 {
+            position: absolute;
+            width: 259px;
+            top: 775px;
+            left: 111px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-19 {
+            position: absolute;
+            width: 259px;
+            top: 582px;
+            left: 111px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-20 {
+            position: absolute;
+            width: 310px;
+            top: 676px;
+            left: 111px;
+            font-family: "Poppins-Medium", Helvetica;
+            font-weight: 500;
+            color: #02010a;
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .image-3 {
+            width: 66px;
+            height: 66px;
+            top: 129px;
+            left: 32px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .home {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 242px;
+            left: 31px;
+            object-fit: cover;
+          }
+          
+          .feed .explore {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 355px;
+            left: 31px;
+            object-fit: cover;
+          }
+          
+          .feed .planner {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 567px;
+            left: 31px;
+            object-fit: cover;
+          }
+          
+          .feed .recent {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 666px;
+            left: 31px;
+            object-fit: cover;
+          }
+          
+          .feed .video {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 468px;
+            left: 31px;
+            object-fit: cover;
+          }
+          
+          .feed .more {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 874px;
+            left: 36px;
+            object-fit: cover;
+          }
+          
+          .feed .bookmark {
+            width: 70px;
+            height: 70px;
+            top: 765px;
+            left: 31px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-10 {
+            position: absolute;
+            width: 500px;
+            height: 241px;
+            top: 193px;
+            left: 446px;
+            background-color: #f7f9f9;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-21 {
+            position: absolute;
+            width: 304px;
+            top: 18px;
+            left: 73px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-22 {
+            top: 18px;
+            left: 458px;
+            position: absolute;
+            width: 37px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .image-4 {
+            width: 57px;
+            height: 58px;
+            top: 7px;
+            left: 10px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .image-5 {
+            position: absolute;
+            width: 342px;
+            height: 176px;
+            top: 56px;
+            left: 85px;
+            object-fit: cover;
+          }
+          
+          .feed .overlap-11 {
+            position: absolute;
+            width: 1017px;
+            height: 579px;
+            top: 477px;
+            left: 446px;
+          
+          }
+          
+          .feed .overlap-12 {
+            position: absolute;
+            width: 1017px;
+            height: 578px;
+            top: 1px;
+            left: 0;
+            
+          }
+          
+          .feed .rectangle-2 {
+            width: 1017px;
+            height: 498px;
+            top: 80px;
+            background-color: #d7d7d733;
+            border-radius: 30px;
+            position: absolute;
+            left: 0;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-23 {
+            width: 304px;
+            top: 87px;
+            left: 18px;
+            font-size: 25px;
+            position: absolute;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .image-6 {
+            width: 124px;
+            height: 124px;
+            top: 0;
+            left: 445px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .image-7 {
+            width: 904px;
+            height: 346px;
+            top: 144px;
+            left: 57px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 496px;
+            left: 57px;
+            object-fit: cover;
+          }
+          
+          .feed .comment {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 496px;
+            left: 145px;
+            object-fit: cover;
+            
+          }
+          
+          .feed .share {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 496px;
+            left: 223px;
+            object-fit: cover;
+          }
+          
+          .feed .icons-bookmark {
+            width: 30px;
+            height: 30px;
+            top: 495px;
+            left: 913px;
+            position: absolute;
+            object-fit: cover;
+          }
+          
+          .feed .text-wrapper-24 {
+            left: 93px;
+            position: absolute;
+            width: 30px;
+            top: 492px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #02010a;
+            font-size: 27px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-25 {
+            position: absolute;
+            width: 828px;
+            top: 532px;
+            left: 57px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-26 {
+            left: 179px;
+            position: absolute;
+            width: 30px;
+            top: 492px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #02010a;
+            font-size: 27px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-27 {
+            position: absolute;
+            width: 339px;
+            top: 0;
+            left: 0;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 40px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .overlap-13 {
+            position: absolute;
+            width: 506px;
+            height: 241px;
+            top: 196px;
+            left: 968px;
+          }
+          
+          .feed .rectangle-3 {
+            width: 500px;
+            height: 241px;
+            top: 0;
+            background-color: #f7f9f9;
+            border-radius: 30px;
+            position: absolute;
+            left: 0;
+            box-shadow: 0px 4px 4px #00000040;
+          }
+          
+          .feed .text-wrapper-28 {
+            top: 20px;
+            left: 469px;
+            position: absolute;
+            width: 37px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: normal;
+            white-space: nowrap;
+          }
+          
+          .feed .text-wrapper-29 {
+            position: absolute;
+            width: 339px;
+            top: 113px;
+            left: 446px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #02010a;
+            font-size: 40px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .text-wrapper-30 {
+            position: absolute;
+            width: 117px;
+            top: 127px;
+            left: 1326px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #7161ef;
+            font-size: 27px;
+            letter-spacing: 1px;
+            line-height: normal;
+          }
+          
+          .feed .chat-bubble {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 8px;
+            left: 1571px;
+            object-fit: cover;
+          }
+          
+          .feed .notification {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 8px;
+            left: 1658px;
+            object-fit: cover;
+          }
+          
+          .feed .settings {
+            position: absolute;
+            width: 80px;
+            height: 75px;
+            top: 6px;
+            left: 1823px;
+            object-fit: cover;
+          }
+          
+          .feed .plus-sign {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 8px;
+            left: 1484px;
+            object-fit: cover;
+          }
+          
+          .feed .line {
+            position: absolute;
+            width: 2px;
+            height: 1080px;
+            top: 0;
+            left: 427px;
+          }
+          /*ADDED DROPDOW MENU IN SETTINGS*/
+
+
+.dropdown{
+    position:relative;
+    float: right;
+  }
+
+.dropdown .menu-btn{
+    background-color: transparent;
+    margin:.5rem;
+    margin-left:0;
+    background-color:none;
+    padding:10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown .menu{
+    height: 200px;
+    display:none;
+    position:absolute;
+    /*background-color: #4361ee;*/
+    background-color: rgb(185, 173, 230);
+    border-radius: 15px;
+    min-width:300px;
+    box-shadow: 0px 4px 4px #00000040;
+    right:0;
+    margin:1rem;
+    cursor: pointer;
+    top:50px;
+
+}
+
+.menu a{
+  color:white;
+  padding: 20px 16px;
+  text-decoration: none;
+  display:flex;
+  font-size:25px;
+  font-family: "Poppins-Bold", Helvetica;
+  gap:1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.dropdown:hover .menu{
+  display:block;
+}
+
+.dropdown .menu a:hover {
+  background-color: rgb(121, 125, 179);
+  border-radius: 15px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="feed">
+      <div class="div">
+        
+        <div class="input">
+          <div class="overlap-group">
+            <div class="text-wrapper">Search</div>
+            <img class="button" src="feedimg/icons8-search-48 (1).png" />
+          </div>
+        </div>
+        <div class="overlap">
+          <div class="overlap-2">
+            <div class="rectangle"></div>
+            <div class="text-wrapper-2">Following</div>
+          </div>
+          <div class="text-wrapper-3">Mariamodern</div>
+          <div class="text-wrapper-4">Just_Ira</div>
+          <div class="text-wrapper-5">its_cayii</div>
+          <div class="text-wrapper-6">jeem_rigor</div>
+          <div class="group"></div>
+          <div class="signupbutton">
+            <div class="div-wrapper"><a href="#" class="text-wrapper-7">About</a></div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="div-wrapper"><a href="resumes/Ira/index.html" class="text-wrapper-7">About</a></div>
+          </div>
+          <div class="overlap-group-wrapper">
+            <div class="div-wrapper"><a href="#" class="text-wrapper-7">About</a></div>
+          </div>
+          <div class="signupbutton-2">
+            <div class="div-wrapper"><a href="#" class="text-wrapper-7">About</a></div>
+          </div>
+          
+          <img class="image5" src="feedimg/me.jpg" />
+          <img class="image" src="feedimg/eeaed1d8-7614-4a5d-a376-2371f5d48340.jpg" />
+          <img class="img" src="resumes/Cordero/Resume_profile.jpg  " />
+          <img class="image-2" src="resumes/Rigor/profile_resume.jpg" />
+        </div>
+        <div class="overlap-3">
+          <div class="overlap-4">
+            <div class="text-wrapper-8">Hiking</div>
+            <img class="hiking" src="feedimg/icons8-hiking-50.png" />
+          </div>
+          <div class="overlap-5">
+            <div class="text-wrapper-9">Cooking</div>
+            <img class="cooking-pot" src="feedimg/icons8-cooking-pot-24.png" />
+          </div>
+          <div class="overlap-6"><div class="text-wrapper-10">Recommendations</div></div>
+          <div class="overlap-7">
+            <div class="text-wrapper-11">Fashion</div>
+            <img class="fashion" src="feedimg/icons8-fashion-24.png" />
+          </div>
+          <div class="overlap-8">
+            <div class="text-wrapper-12">Fitness</div>
+            <img class="fitness" src="feedimg/icons8-fitness-24.png" />
+          </div>
+        </div>
+        <div class="overlap-9">
+          <img class="photo" src="feedimg/photo_2024-03-26_20-29-38-removebg-preview.png" />
+          <div class="text-wrapper-13">Just_Persephone</div>
+          <div class="text-wrapper-14">Home</div>
+          <div class="text-wrapper-15">Explore</div>
+          <div class="text-wrapper-16">Videos</div>
+          <div class="text-wrapper-17">More</div>
+          <div class="text-wrapper-18">Saved</div>
+          <div class="text-wrapper-19">Events</div>
+          <div class="text-wrapper-20">Recent activity</div>
+          <img class="image-3" src="feedimg\7869de4ffa030da3fc2359384cb1fe72.jpg" />
+          <img class="home" src="feedimg/icons8-home-48.png" />
+          <img class="explore" src="feedimg/icons8-explore-48.png" />
+          <img class="planner" src="feedimg/icons8-event-48.png" />
+          <img class="recent" src="feedimg/icons8-recent-48.png" />
+          <img class="video" src="feedimg/icons8-film-roll-48.png" />
+          <img class="more" src="feedimg/icons8-more-48.png" />
+          <img class="bookmark" src="feedimg/icons8-save-48.png" />
+        </div>
+        <div class="overlap-10">
+          <div class="text-wrapper-21">its_cayii</div>
+          <div class="text-wrapper-22">...</div>
+          <img class="image-4" src="resumes/Cordero/Resume_profile.jpg" />
+          <img class="image-5" src="feedimg\c809c8f442c9a1072f5915108b562730.jpg" />
+        </div>
+        <div class="overlap-11">
+          <div class="overlap-12">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-23">maria.inmodern</div>
+            <img class="image-6" src="feedimg/me.jpg" />
+            <img class="image-7" src="feedimg/comp.gif" />
+            <img class="heart" src="feedimg/icons8-heart-50.png" />
+            <img class="comment" src="feedimg/icons8-comment-24.png" />
+            <img class="share" src="feedimg/icons8-share-30.png" />
+            <img class="icons-bookmark" src="feedimg/icons8-bookmark-32.png" />
+            <div class="text-wrapper-24">50k</div>
+            <div class="text-wrapper-25">Dream it, then Make it Happen.</div>
+            <div class="text-wrapper-26">2k</div>
+          </div>
+          <div class="text-wrapper-27">Feed</div>
+        </div>
+        <div class="overlap-13">
+          <div class="rectangle-3"></div>
+          <div class="text-wrapper-21">jeem_rigor</div>
+          <img class="image-4" src="resumes/Rigor/profile_resume.jpg" />
+          <img class="image-5" src="feedimg/sunsets.jpg" />
+          <div class="text-wrapper-28">...</div>
+        </div>
+        <div class="text-wrapper-29">Trending today</div>
+        <div class="text-wrapper-30">View All</div>
+        <img class="chat-bubble" src="feedimg/icons8-message-64.png" />
+        <img class="notification" src="feedimg/icons8-notification-64.png" />
+        <img class="plus-sign" src="feedimg/icons8-plus-64.png" />
+        <img class="line" src="img/line-1.svg" />
+        
+        <div class="dropdown">
+            <button class="menu-btn"><img src="feedimg/icons8-settings-48.png"></button> 
+            <div class="menu">
+            <a href="feed.html"><img src="images/icons8-username-30.png" > Switch account</a>
+            <a href="login.html"><img src="images/icons8-logout-rounded-25.png" > Logout</a>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

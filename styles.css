@@ -1,0 +1,1384 @@
+/* Styling for the body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Set height to 100% */
+    /* Background image for the page */
+    background-color: #edf2f4;
+    background-size: cover;
+    background-position: center;
+    /* Font family for the page */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Styling for the main login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.signup_forgot-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Styling for the main container holding the login form */
+.container {
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Change width to 100% */
+    height: 100%; /* Change height to 100% */
+}
+
+
+/* Styling for the left column containing introductory information */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+
+/* Styling for the logo container */
+.logo-container {
+    margin-bottom: 15px;
+}
+
+  /* Styling for the logo image */
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+}
+
+.login-form {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+
+/* Styling for the form headings */
+h1 {
+    color: #6420AA;
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Styling for the input containers */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    left:0;
+}
+
+
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 45px;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+.input-container input.username {
+    background-image: url('images/icons8-username-30.png'); /* URL for username icon */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust icon size as needed */
+    background-position: 15px center; /* Adjust icon position */
+
+}
+
+.input-container input.password {
+    background-image: url('images/icons8-lock-24.png'); /* URL for password icon */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust icon size as needed */
+    background-position: 15px center; /* Adjust icon position */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.form-bottom label {
+    margin-right: 20px;
+}
+
+.forgot-password {
+    color: #6420aa;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* Styling for the login button */
+.login-container .container .left-column form input[type="submit"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #6420aa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container .container .left-column form input[type="submit"]:hover {
+    background-color: #33186b;
+}
+
+.right-column {
+    width: 55%;
+    background-image: url('images/0eb99ccdc16d48cbac2963ce77674f3e.jpg'); /* URL for password icon */
+    background-repeat: no-repeat;
+    background-size: cover; /* Change background-size to cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image-container {
+    width: 100%;
+    max-height: 65%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+.image-container img {
+    max-width: 125%;
+    max-height: 110%;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+.signup-section {
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Styling for the form headings */
+.signup-form h1 {
+    color: #6420AA;
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.signup-section h1 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.signup-section p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Styling for the signup link button */
+.signup-section .hollow-button {
+    padding: 6px 18px;
+    border: 2px solid #F5EEE6;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #F5EEE6;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    text-decoration: none; /* Added text-decoration */
+    display: inline-block; /* Added display */
+}
+
+/* Hover styling for the signup link button */
+.signup-section .hollow-button:hover {
+    color: #3c096c;
+    border-color: #3c096c;
+}
+
+.signup_forgot-container.form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+/* Add this CSS to your existing styles.css file or create a new one */
+
+.signup_forgot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.signup-form h1 {
+    color: #6420AA;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.signup_forgot-container.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.signup_forgot-container.right-column {
+    width: 40%;
+    background-image: url('images/0eb99ccdc16d48cbac2963ce77674f3e.jpg'); /* URL for password icon */
+    background-repeat: no-repeat;
+    background-size: cover; /* Change background-size to cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.input-column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-column:last-child {
+    margin-right: 0;
+}
+
+.input-column input, .input-column select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.terms-checkbox {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.terms-checkbox label {
+    font-size: 14px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Styling for the login button */
+.signup_forgot-container .container .left-column form input[type="submit"] {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #6420aa;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup_forgot-container .container .left-column form input[type="submit"]:hover {
+    background-color: #33186b;
+}
+
+.feed {
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .feed .div {
+    background-color: #e9ecef;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  
+  .feed .input {
+    position: absolute;
+    width: 789px;
+    height: 66px;
+    top: 16px;
+    left: 565px;
+    background-color: #f5f5fa;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: inset -5px -5px 10px #ffffff, inset 5px 5px 10px #aaaacc80, inset 2px 2px 4px #aaaacc40,
+      inset -2px -2px 4px #ffffff80;
+  }
+  
+  .feed .overlap-group {
+    position: relative;
+    width: 757px;
+    height: 66px;
+    left: 32px;
+  }
+  
+  .feed .text-wrapper {
+    position: absolute;
+    width: 693px;
+    height: 40px;
+    top: 12px;
+    left: 0;
+    opacity: 0.6;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #7878aa;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+  
+  .feed .button {
+    position: absolute;
+    width: 67px;
+    height: 66px;
+    top: 0;
+    left: 690px;
+  }
+  
+  .feed .overlap {
+    position: absolute;
+    width: 421px;
+    height: 440px;
+    top: 158px;
+    left: 1483px;
+    background-color: #f7f9f9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .overlap-2 {
+    position: absolute;
+    width: 421px;
+    height: 67px;
+    top: 0;
+    left: 0;
+  }
+  
+  .feed .rectangle {
+    width: 421px;
+    height: 66px;
+    top: 0;
+    background-color: #4361ee;
+    border-radius: 30px 30px 0px 0px;
+    position: absolute;
+    left: 0;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-2 {
+    position: absolute;
+    width: 259px;
+    top: 7px;
+    left: 11px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 35px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-3 {
+    position: absolute;
+    width: 165px;
+    top: 108px;
+    left: 89px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-4 {
+    width: 165px;
+    top: 197px;
+    left: 89px;
+    font-size: 20px;
+    position: absolute;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-5 {
+    position: absolute;
+    width: 165px;
+    top: 282px;
+    left: 89px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-6 {
+    position: absolute;
+    width: 165px;
+    top: 366px;
+    left: 91px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .group {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: 87px;
+    left: 11px;
+    background-image: url(./img/image-17.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .feed .signupbutton {
+    top: 109px;
+    left: 305px;
+    position: absolute;
+    width: 105px;
+    height: 37px;
+  }
+  
+  .feed .div-wrapper {
+    position: relative;
+    width: 103px;
+    height: 37px;
+    border-radius: 70px;
+    border: 1px solid;
+    border-color: #f9fbfd;
+    box-shadow: 0px 4px 4px #1200ff40;
+    background: linear-gradient(180deg, rgb(58, 12, 163) 0%, rgb(36, 0, 70) 100%);
+  }
+  
+  .feed .text-wrapper-7 {
+    position: absolute;
+    width: 76px;
+    top: 3px;
+    left: 14px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #f9fafc;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .overlap-wrapper {
+    top: 194px;
+    left: 309px;
+    position: absolute;
+    width: 105px;
+    height: 37px;
+  }
+  
+  .feed .overlap-group-wrapper {
+    top: 279px;
+    left: 307px;
+    position: absolute;
+    width: 105px;
+    height: 37px;
+  }
+  
+  .feed .signupbutton-2 {
+    top: 363px;
+    left: 308px;
+    position: absolute;
+    width: 105px;
+    height: 37px;
+  }
+  
+  .feed .image {
+    width: 68px;
+    height: 68px;
+    top: 176px;
+    left: 11px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .img {
+    width: 68px;
+    height: 68px;
+    top: 264px;
+    left: 11px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .image-2 {
+    width: 68px;
+    height: 68px;
+    top: 353px;
+    left: 11px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-3 {
+    position: absolute;
+    width: 421px;
+    height: 418px;
+    top: 638px;
+    left: 1483px;
+    background-color: #f7f9f9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .overlap-4 {
+    position: absolute;
+    width: 130px;
+    height: 118px;
+    top: 105px;
+    left: 56px;
+    background-color: #9683ec;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-8 {
+    position: absolute;
+    width: 75px;
+    top: 81px;
+    left: 27px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .hiking {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 26px;
+    left: 40px;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-5 {
+    position: absolute;
+    width: 130px;
+    height: 118px;
+    top: 252px;
+    left: 56px;
+    background-color: #ffcf70;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-9 {
+    position: absolute;
+    width: 104px;
+    top: 80px;
+    left: 17px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .cooking-pot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 31px;
+    left: 40px;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-6 {
+    position: absolute;
+    width: 421px;
+    height: 83px;
+    top: 0;
+    left: 0;
+    background-color: #4361ee;
+    border-radius: 30px 30px 0px 0px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-10 {
+    position: absolute;
+    width: 365px;
+    top: 15px;
+    left: 21px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 35px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .overlap-7 {
+    position: absolute;
+    width: 130px;
+    height: 118px;
+    top: 105px;
+    left: 224px;
+    background-color: #4895ef;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-11 {
+    position: absolute;
+    width: 107px;
+    top: 79px;
+    left: 23px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .fashion {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 26px;
+    left: 48px;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-8 {
+    position: absolute;
+    width: 130px;
+    height: 118px;
+    top: 252px;
+    left: 229px;
+    background-color: #f992ad;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-12 {
+    position: absolute;
+    width: 81px;
+    top: 82px;
+    left: 27px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .fitness {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 31px;
+    left: 43px;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-9 {
+    position: absolute;
+    width: 427px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    background-color: #f7f9f9;
+  }
+  
+  .feed .photo {
+    position: absolute;
+    width: 276px;
+    height: 68px;
+    top: 28px;
+    left: 76px;
+    object-fit: cover;
+  }
+  
+  .feed .text-wrapper-13 {
+    position: absolute;
+    width: 259px;
+    top: 142px;
+    left: 106px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-14 {
+    top: 257px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    white-space: nowrap;
+    position: absolute;
+    width: 259px;
+    left: 111px;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-15 {
+    position: absolute;
+    width: 259px;
+    top: 371px;
+    left: 111px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-16 {
+    position: absolute;
+    width: 259px;
+    top: 479px;
+    left: 111px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-17 {
+    top: 884px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    position: absolute;
+    width: 259px;
+    left: 111px;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-18 {
+    position: absolute;
+    width: 259px;
+    top: 775px;
+    left: 111px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-19 {
+    position: absolute;
+    width: 259px;
+    top: 582px;
+    left: 111px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-20 {
+    position: absolute;
+    width: 310px;
+    top: 676px;
+    left: 111px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #02010a;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .image-3 {
+    width: 66px;
+    height: 66px;
+    top: 129px;
+    left: 32px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .home {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 242px;
+    left: 31px;
+    object-fit: cover;
+  }
+  
+  .feed .explore {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 355px;
+    left: 31px;
+    object-fit: cover;
+  }
+  
+  .feed .planner {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 567px;
+    left: 31px;
+    object-fit: cover;
+  }
+  
+  .feed .recent {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 666px;
+    left: 31px;
+    object-fit: cover;
+  }
+  
+  .feed .video {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 468px;
+    left: 31px;
+    object-fit: cover;
+  }
+  
+  .feed .more {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 874px;
+    left: 36px;
+    object-fit: cover;
+  }
+  
+  .feed .bookmark {
+    width: 70px;
+    height: 70px;
+    top: 765px;
+    left: 31px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-10 {
+    position: absolute;
+    width: 500px;
+    height: 241px;
+    top: 193px;
+    left: 446px;
+    background-color: #f7f9f9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-21 {
+    position: absolute;
+    width: 304px;
+    top: 18px;
+    left: 73px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-22 {
+    top: 18px;
+    left: 458px;
+    position: absolute;
+    width: 37px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .image-4 {
+    width: 57px;
+    height: 58px;
+    top: 7px;
+    left: 10px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .image-5 {
+    position: absolute;
+    width: 342px;
+    height: 176px;
+    top: 56px;
+    left: 85px;
+    object-fit: cover;
+  }
+  
+  .feed .overlap-11 {
+    position: absolute;
+    width: 1017px;
+    height: 579px;
+    top: 477px;
+    left: 446px;
+  }
+  
+  .feed .overlap-12 {
+    position: absolute;
+    width: 1017px;
+    height: 578px;
+    top: 1px;
+    left: 0;
+  }
+  
+  .feed .rectangle-2 {
+    width: 1017px;
+    height: 498px;
+    top: 80px;
+    background-color: #d7d7d733;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-23 {
+    width: 304px;
+    top: 87px;
+    left: 18px;
+    font-size: 25px;
+    position: absolute;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .image-6 {
+    width: 124px;
+    height: 124px;
+    top: 0;
+    left: 445px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .image-7 {
+    width: 904px;
+    height: 346px;
+    top: 144px;
+    left: 57px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 496px;
+    left: 57px;
+    object-fit: cover;
+  }
+  
+  .feed .comment {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 496px;
+    left: 140px;
+    object-fit: cover;
+  }
+  
+  .feed .share {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 496px;
+    left: 223px;
+    object-fit: cover;
+  }
+  
+  .feed .icons-bookmark {
+    width: 30px;
+    height: 30px;
+    top: 495px;
+    left: 913px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .feed .text-wrapper-24 {
+    left: 96px;
+    position: absolute;
+    width: 30px;
+    top: 492px;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #02010a;
+    font-size: 27px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-25 {
+    position: absolute;
+    width: 828px;
+    top: 532px;
+    left: 57px;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-26 {
+    left: 179px;
+    position: absolute;
+    width: 30px;
+    top: 492px;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #02010a;
+    font-size: 27px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-27 {
+    position: absolute;
+    width: 339px;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .overlap-13 {
+    position: absolute;
+    width: 506px;
+    height: 241px;
+    top: 196px;
+    left: 968px;
+  }
+  
+  .feed .rectangle-3 {
+    width: 500px;
+    height: 241px;
+    top: 0;
+    background-color: #f7f9f9;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .feed .text-wrapper-28 {
+    top: 20px;
+    left: 469px;
+    position: absolute;
+    width: 37px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .feed .text-wrapper-29 {
+    position: absolute;
+    width: 339px;
+    top: 113px;
+    left: 446px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #02010a;
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .text-wrapper-30 {
+    position: absolute;
+    width: 117px;
+    top: 127px;
+    left: 1326px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #7161ef;
+    font-size: 27px;
+    letter-spacing: 1px;
+    line-height: normal;
+  }
+  
+  .feed .chat-bubble {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 8px;
+    left: 1571px;
+    object-fit: cover;
+  }
+  
+  .feed .notification {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 8px;
+    left: 1658px;
+    object-fit: cover;
+  }
+  
+  .feed .settings {
+    position: absolute;
+    width: 80px;
+    height: 75px;
+    top: 6px;
+    left: 1823px;
+    object-fit: cover;
+  }
+  
+  .feed .plus-sign {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 8px;
+    left: 1484px;
+    object-fit: cover;
+  }
+  
+  .feed .line {
+    position: absolute;
+    width: 2px;
+    height: 1080px;
+    top: 0;
+    left: 427px;
+  }
+
+  .input-container .email{
+    width:100%;
+  }
+
+  /*ADDED STYLES FOR RECOVERY/FORGOT PAGE*/
+    /*NOTE:signup-container changed into signup_forgot-container*/
+
+/*icon behind confirm password*/
+  .input-container input.confirm-password {
+    background-image: url('images/icons8-lock-24.png'); /* URL for confirm password icon */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust icon size as needed */
+    background-position: 15px center; /* Adjust icon position */
+  }
+
+/*icon behine phone number*/
+  .input-container input.phone-number {
+    background-image: url('images/icons8-phone-30.png'); /* URL for phone icon */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust icon size as needed */
+    background-position: 15px center; /* Adjust icon position */
+  }
+
+/*icon behid birthday*/
+  .input-container input.birth-date {
+    background-image: url('images/icons8-date-50.png'); /* URL for calendar icon */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust icon size as needed */
+    background-position: 15px center; /* Adjust icon position */
+  }
+
+/*icon behind email*/
+.input-container input.email {
+  background-image: url('images/icons8-email-30.png'); /* URL for email icon */
+  background-repeat: no-repeat;
+  background-size: 20px; /* Adjust icon size as needed */
+  background-position: 15px center; /* Adjust icon position */
+}
+
+/*ADDED DROPDOW MENU IN SETTINGS*/
+
+
+.dropdown{
+    position:relative;
+    float: right;
+  }
+
+.dropdown .menu-btn{
+    background-color: transparent;
+    margin:.5rem;
+    margin-left:0;
+    background-color:none;
+    padding:10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown .menu{
+    height: 200px;
+    display:none;
+    position:absolute;
+    /*background-color: #4361ee;*/
+    background-color: rgb(185, 173, 230);
+    border-radius: 15px;
+    min-width:300px;
+    box-shadow: 0px 4px 4px #00000040;
+    right:0;
+    margin:1rem;
+    cursor: pointer;
+    top:50px;
+
+}
+
+.menu a{
+  color:white;
+  padding: 20px 16px;
+  text-decoration: none;
+  display:flex;
+  font-size:25px;
+  font-family: "Poppins-Bold", Helvetica;
+  gap:1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.dropdown:hover .menu{
+  display:block;
+}
+
+.dropdown .menu a:hover {
+  background-color: rgb(121, 125, 179);
+  border-radius: 15px;
+}

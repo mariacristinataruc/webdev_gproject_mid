@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Creating a container for the login section -->
+    <div class="login-container">
+        <!-- Creating a container for the login form and other elements -->
+        <div class="container">
+            <!-- Creating the left column for the login form -->
+            <div class="left-column">
+                <!-- Container for the logo -->
+                <div class="logo-container">
+                    <!-- Inserting the logo image -->
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+                <!-- Creating the login form -->
+                <form class="login-form" action="feed.html" method="post">
+                    <!-- Title for the login form -->
+                    <h1>Login</h1>
+                    <!-- Container for the username input -->
+                    <div class="input-container">
+                        <!-- Input field for the username -->
+                        <input type="text" class="username" name="username" placeholder="Username" required>
+                    </div>
+                    <!-- Container for the password input -->
+                    <div class="input-container">
+                        <!-- Input field for the password -->
+                        <input type="password" class="password" name="password" id="password" placeholder="Password" required>
+                        <!-- Icon to toggle password visibility -->
+                        <span class="password-toggle" onclick="togglePasswordVisibility()">
+                            <img src="images/icons8-eyelashes-2d-30.png" alt="Toggle Password Visibility">
+                        </span>
+                    </div>
+                    <!-- Container for additional form elements -->
+                    <div class="form-bottom">
+                        <!-- Checkbox for remembering the login -->
+                        <label><input type="checkbox"> Remember me</label>
+                        <!-- Link for resetting the password -->
+                        <a href="forgot.html">Forgot password?</a>
+                    </div>
+                    <!-- Submit button for the form -->
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+            <!-- Creating the right column for signup options -->
+            <div class="right-column">
+                <!-- New division for the image -->
+                <div class="image-container">
+                    <img src="images/image1.png" alt="Signup Image">
+                </div>
+                <!-- Section for signing up -->
+                <div class="signup-section">
+                    <!-- Title for the signup section -->
+                    <h1>New here?</h1>
+                    <!-- Description for signing up -->
+                    <p>Welcome to our vibrant community. Capture moments, share stories, 
+                        and connect with others who share your passions. Sign up now and 
+                        start sharing your world with us!</p>
+                    <!-- Button for signing up -->
+                    <a href="signup.html" class="hollow-button">Sign Up</a>
+                </div>                
+            </div>
+                       
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var icon = document.querySelector(".password-toggle img");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.src = "images/icons8-eye-30.png"; // Change the icon to indicate hidden password
+            } else {
+                passwordField.type = "password";
+                icon.src = "images/icons8-eyelashes-2d-30.png"; // Change the icon to indicate visible password
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

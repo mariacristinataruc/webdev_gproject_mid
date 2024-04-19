@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recover Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.right-column {
+    background-image: url("images/forgot.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+}
+    .input-row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1px;
+    }
+
+    .input-row .dropdown-container {
+      display: flex; /* Make the dropdown container a flexbox */
+    }
+
+    .input-row .input-container {
+      flex: 1; /* Makes each input container take up half the available space */
+      margin-right: 10px; /* Add some margin between input containers */
+    }
+
+    /* Styles for the dropdown button */
+    .dropdown-container select {
+      appearance: none; /* Remove default dropdown styling */
+      width: 235px;
+        padding: 15px;
+        border: none;
+        border-radius: 25px;
+        box-sizing: border-box;
+        font-size: 18px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the dropdown options (hover effect) */
+    .dropdown-container select:hover {
+      border-color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="signup_forgot-container">
+    <div class="container">
+      <div class="left-column">
+        <a href="login.html"><img class="back" src="profileimg/icons8-back-64.png" style="position: absolute; width: 63px;height: 63px;top: 7px;left: 5px;object-fit: cover;"></a>
+        <div class="logo-container">
+          <img src="images/logo.png" alt="Logo">
+        </div>
+        <form class="signup-form" action="login.html" method="post">
+          <h1>Recover Account</h1>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="text" class="username" name="username" placeholder="username" required>
+            </div>
+            
+          </div>
+        
+          <div class="input-row">
+            <div class="input-container">
+              <input type="email" class="email" name="email" placeholder="Email Address" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="password" class="password" name="password" id="password" placeholder="New Password" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+            </div>
+          </div>
+          
+          <input type="submit" value="Login" onclick="login()">
+        </form>
+      </div>
+      <!-- Creating the right column for signup options -->
+      <div class="right-column">
+        <!-- New division for the image -->                  
+    </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      // Implement password toggle logic here (similar to your login page)
+      var passwordField = document.getElementById("password");
+            var icon = document.querySelector(".password-toggle img");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.src = "images/icons8-eye-30.png"; // Change the icon to indicate hidden password
+                
+            } else {
+                passwordField.type = "password";
+                icon.src = "images/icons8-eyelashes-2d-30.png"; // Change the icon to indicate visible password
+            }
+        }
+
+  </script>
+</body>
+</html>

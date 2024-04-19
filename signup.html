@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.right-column {
+    width: 45%;
+    background-image: url('images/0eb99ccdc16d48cbac2963ce77674f3e.jpg'); /* URL for password icon */
+    background-repeat: no-repeat;
+    background-size: cover; /* Change background-size to cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+}
+    .input-row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1px;
+    }
+
+    .input-row .dropdown-container {
+      display: flex; /* Make the dropdown container a flexbox */
+    }
+
+    .input-row .input-container {
+      flex: 1; /* Makes each input container take up half the available space */
+      margin-right: 10px; /* Add some margin between input containers */
+    }
+
+    /* Styles for the dropdown button */
+    .dropdown-container select {
+      appearance: none; /* Remove default dropdown styling */
+      width: 235px;
+        padding: 15px;
+        border: none;
+        border-radius: 25px;
+        box-sizing: border-box;
+        font-size: 18px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the dropdown options (hover effect) */
+    .dropdown-container select:hover {
+      border-color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="signup_forgot-container">
+    <div class="container">
+      <div class="left-column">
+        <div class="logo-container">
+          <img src="images/logo.png" alt="Logo">
+        </div>
+        <form class="signup-form" action="login.html" method="post">
+          <h1>Sign Up</h1>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="text" class="firstname" name="firstname" placeholder="First Name" required>
+            </div>
+            <div class="input-container">
+              <input type="text" class="lastname" name="lastname" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="dropdown-container">
+              <div class="input-container">
+                <select name="country" required>
+                  <option value="">Select Country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="AU">Australia</option>
+                </select>
+              </div>
+              <div class="input-container">
+                <select name="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="non-binary">Non-Binary</option>
+                  <option value="other">Prefer Not to Say</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="text" class="birth-date" name="birth-date" placeholder="Birthday (YYYY-MM-DD)" required>
+            </div>
+            <div class="input-container">
+              <input type="text" class="username" name="username" placeholder="Username" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="email" class="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-container">
+              <input type="tel" class="phone-number" name="phone-number" placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <div class="input-container">
+              <input type="password" class="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="input-container">
+              <input type="password" class="confirm-password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+            </div>
+          </div>
+          <div class="form-bottom">
+            <div class="form-bottom">
+                <label>
+                    <input type="checkbox"> 
+                    I Agree to <a href="terms.html">Terms & Conditions</a>
+                </label>
+            </div>
+            
+          </div>
+          <input type="submit" value="Sign Up" onclick="signin()">
+        </form>
+      </div>
+      <div class="right-column">
+        <div class="image-container">
+          <img src="images/image1.png" alt="Signup Image">
+        </div>
+        <div class="signup-section">
+          <h1>Join our vibrant community!</h1>
+          <p>Create an account and start connecting with people who share your passions.</p>
+          <p style=" font-size:10px">Already have an account?</p>
+          <a href="login.html" class="hollow-button">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      // Implement password toggle logic here (similar to your login page)
+      var passwordField = document.getElementById("password");
+            var icon = document.querySelector(".password-toggle img");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.src = "images/icons8-eye-30.png"; // Change the icon to indicate hidden password
+                
+            } else {
+                passwordField.type = "password";
+                icon.src = "images/icons8-eyelashes-2d-30.png"; // Change the icon to indicate visible password
+            }
+        }
+
+       
+  </script>
+</body>
+</html>
