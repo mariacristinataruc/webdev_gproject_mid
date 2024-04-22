@@ -1,0 +1,191 @@
+/*this is the body styling*/
+body {
+    background: #739072;/*the background set into a shades of a green */
+    display:flex; /* to flex layout*/
+    justify-content:center ;/* justify content into center*/
+    align-items: center;/* allign items into center*/
+    margin: 10%;/* set the margin around the body into 10 %*/
+    max-width: auto;/* set maximum width into auto*/
+    max-height: auto;/* set maximum height into auto*/
+}
+
+/*this is the container styling*/
+#container {
+    position:relative;/* relative positioning */
+    width:auto;/* set width to automatic adjust*/
+    height: auto;/* set height into automatic adjust*/
+    max-width:700px;/* set maximum width of container into 700px*/
+    min-height: 80px;/* set maximum height of container into 800px*/
+    box-shadow: 0 35px 55px (0,0,0,0,1);/*use to have a box shadow*/
+
+}
+
+/*this is a styling for the right column*/
+#d2 h1{
+    text-align: center; /* text set into center alignment*/
+    text-indent: 0;/* text set into 0 indentation*/
+}
+
+/*this is the right column styling*/
+#d1 {
+    position:relative;
+    text-indent: 8px;
+    background-color:#5f6f52;
+    color: white;
+    width: 30%;
+    float:left;
+    height:900px;
+    overflow-wrap: break-word;
+    
+    
+}
+
+/*this is the image styling in the lefy column */
+#d1 #img{
+    position:relative;
+    width:  120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left: 20%;
+    display: flex;
+
+    
+
+}
+/*this is the contact info styling*/
+#contactinfo{
+    font-size: 95%;
+}
+#phone{/*this is the phone number styling*/
+    font-weight: bold;
+}
+#email{/*this is the  email styling*/
+    font-weight: bold;
+}
+#address{/*this is the address styling*/
+    font-weight: bold;
+}
+#personinfo{/*this is the personal info styling*/
+    font-size: 90%;
+}
+#bdate{/*this is the birthday styling*/
+    font-weight: bold;
+
+}
+#status{/*this is the status styling*/
+    font-weight: bold;
+}
+#citizen{/*this is the citizen styling*/
+    font-weight: bold;
+}
+
+#skills{/*this is the skills styling*/
+    font-size: 95%;
+}
+#listS{/*this is the list sor seminars and trainings styling*/
+    font-size: 93%;
+    text-indent: 0;
+}
+
+#lang{/*this is the secotion for language in column 2 pr the left column to */
+    font-size: 95%;
+}
+#listE{/*this is a styling for list for the section of language*/
+    font-size: 93%;
+    text-indent: 0;
+}
+
+
+/*this is a styling for list specific in definition term */
+dt{
+    font-size: 85%;
+}
+
+li{/*this is a styling for list */
+    font-size: 90%;
+}
+
+#d2 dt{/*this is a styling for definition term in the left column*/
+    font-size: 90%;
+
+}/*this is a styling for list specific in dfinition description */
+
+/*this is a styling for list specific in sefinition terms under column in the right */
+#d2 dd{
+    text-align: left;
+}
+
+/*this is a styling for the left column*/
+#d2{
+    position:relative;
+    text-indent: 4px;
+    background-color:#C7C8CC;
+    color: black;
+    width: 70%;
+    float:right;
+    height: 900px;
+
+    overflow-wrap: break-word;
+}
+
+/*this is a styling for the left column in the class id name */
+#d2 #name{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+/*this is a styling for the profile description or objective*/
+#paragraph {
+    font-size:80%;
+    letter-spacing: 1px;
+}
+/*this is a styling for the profile description*/
+#profile{
+    padding:10px;
+}
+/*this is a styling for my full name */
+#d2 h1{
+
+    color:black;
+    font-size: 275%;
+    margin-top: 20px;
+    text-align:center;
+    font-weight:600;
+    line-height: 1.3em;
+}
+/*this is a styling for the id ed*/
+#ed h3{
+    font-size: 70%;
+    font-weight:bold;
+}
+/*this is a styling for educationa background section */
+#education {
+    font-size:100%;
+}
+
+#semtrain h3{/*this is a styling for seminars amd trainings */
+    font-size: 70%;
+    font-weight:bold;
+}
+#seminartrain #semlist dd{/*this is a styling for seminars amd trainings, and thedefinition description  */
+    font-size:100%;
+    text-indent: 0;
+}
+#reference{ /*this is a styling for the list references */
+    font-size:100%;
+    text-indent: 10px;
+}
+#ref h3 {/*this is a styling for references */
+    font-size: 70%;
+    margin-bottom: 30%;
+}
+
+.icon {
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    z-index: 9999; /* Ensure it's above other content */
+}
